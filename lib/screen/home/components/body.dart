@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'calories.dart';
+
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -100,9 +102,16 @@ class Body extends StatelessWidget {
               flex: 2,
 
              /* Tap!!! */
-              child: InkWell(
-                onTap:() { },
-
+              child: TextButton(
+                onPressed: () {
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) {
+                  return calScreen();
+                  }
+                ),
+              );
+              },
+              
               child: Stack(
               alignment: Alignment.topCenter,
               children: <Widget>[

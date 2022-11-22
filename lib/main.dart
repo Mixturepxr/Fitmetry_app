@@ -1,4 +1,5 @@
 import 'package:fitmetry/constants.dart';
+import 'package:fitmetry/screen/home/components/calories.dart';
 import 'package:fitmetry/screen/home/components/nav.dart';
 import 'package:flutter/material.dart';
 
