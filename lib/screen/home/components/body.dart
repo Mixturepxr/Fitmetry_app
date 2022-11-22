@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Padding(
-              padding: const EdgeInsets.only(left: 35, right: 5, top: 5),
+              padding: const EdgeInsets.only(left: 35, right: 5, top: 25),
               child: Image.asset('assets/icons/akar-icons_sun-fill.png',
                 height: 40,
                 ),
@@ -32,7 +32,7 @@ class Body extends StatelessWidget {
 
               /*Text "Tues 12 oct" */
               Padding(
-              padding: const EdgeInsets.only(right: 70, top: 65),
+              padding: const EdgeInsets.only(right: 70, top: 80),
               child: Text("TUES 12 OCT",
                 style: Theme.of(context)
                 .textTheme
@@ -85,10 +85,10 @@ class Body extends StatelessWidget {
             Expanded(
               flex: 3,
               child: Padding(
-                padding: const EdgeInsets.only(top:75, left: 50, right: 20),
+                padding: const EdgeInsets.only(top: 85, left: 55, right: 27),
                 child: Image.asset('assets/images/Profile_pic.png',
-                  height: 100,
-                  fit:BoxFit.fill,
+                  height: 130,
+                  // fit:BoxFit.fill,
                   ),
                 ),
               ),
@@ -109,8 +109,8 @@ class Body extends StatelessWidget {
                 
                 /* our backgound of grid calories */
                 Container(
-                  margin: const EdgeInsets.only(left: 38, right: 38,top: 8),
-                  height: 120,
+                  margin: const EdgeInsets.only(left: 38, right: 38,top: 10),
+                  height: 170,
                   decoration: BoxDecoration(
                     color: const Color(0xFF3EB994),
                     borderRadius: BorderRadius.circular(15),
@@ -119,8 +119,8 @@ class Body extends StatelessWidget {
 
                 /* calories image */
                 Positioned(
-                  top: 7,
-                  left: 40,
+                  top: 16,
+                  left: 52,
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 13),
                     height: 118,
@@ -131,7 +131,7 @@ class Body extends StatelessWidget {
 
                 /* Title: calories */
                 Positioned(
-                  top: 25,
+                  top: 32,
                   right: 125,
                   child: SizedBox(
                     height: 136,
@@ -141,7 +141,7 @@ class Body extends StatelessWidget {
                       Text("CALORIES",
                         style: TextStyle(
                           fontFamily: 'Lato',
-                          fontWeight: FontWeight.w600, 
+                          fontWeight: FontWeight.w700, 
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 16,
                           letterSpacing: 0.5,
@@ -154,7 +154,7 @@ class Body extends StatelessWidget {
 
               /* Calories: 560 */
                 Positioned(
-                  top: 22,
+                  top: 28,
                   right: 20,
                   child: SizedBox(
                     height: 136,
@@ -164,7 +164,7 @@ class Body extends StatelessWidget {
                       Text("560",
                         style: TextStyle(
                           fontFamily: 'Lato',
-                          fontWeight: FontWeight.w800, 
+                          fontWeight: FontWeight.w700, 
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 21,
                           letterSpacing: 0.5,
@@ -177,7 +177,7 @@ class Body extends StatelessWidget {
 
               /* Calories: kcal */
                 Positioned(
-                  top: 45,
+                  top: 52,
                   right: 15,
                   child: SizedBox(
                     height: 15,
@@ -200,8 +200,8 @@ class Body extends StatelessWidget {
 
               /* Calories: num% */
                 Positioned(
-                  top: 58,
-                  left: 113,
+                  top: 65,
+                  left: 150,
                   child: SizedBox(
                     height: 100,
                     width: 130,
@@ -223,7 +223,7 @@ class Body extends StatelessWidget {
 
               /* Calories: load */
                 Positioned(
-                top: 55,
+                top: 62,
                 right: 50,
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -235,7 +235,7 @@ class Body extends StatelessWidget {
 
               /* Calories: last update */
                 Positioned(
-                top: 98,
+                top: 105,
                 right: 43,
                 child: SizedBox(
                   height: 100,
@@ -261,25 +261,66 @@ class Body extends StatelessWidget {
         ),
 
           /* All of 4 grid */
-            Expanded(
-              flex: 8,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 23, right: 25),
-                child: GridView(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, 
-                  crossAxisSpacing: 0,
-                  mainAxisSpacing: 18.0,  ),
-                  children: [
-                              Image.asset('assets/images/Walk_Step.png'),
-                              Image.asset('assets/images/Water.png'),
-                              Image.asset('assets/images/Sleep.png'),
-                              Image.asset('assets/images/Exercise.png'),   
-                  ],
+
+          Expanded(
+              flex: 7,
+              child: Stack(
+              alignment: Alignment.topCenter,
+              children: <Widget>[
+               
+                /* calories image */
+                Positioned(
+                  top: 25,
+                  left: 27,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                    height: 200,
+                    width: 190,
+                    child: Image.asset('assets/images/Walk_Step.png'),
+                  ),
                 ),
-              ),
+
+                Positioned(
+                  top: 25,
+                  right: 27,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                    height: 200,
+                    width: 190,
+                    child: Image.asset('assets/images/Water.png'),
+                  ),
+                ),
+
+                Positioned(
+                  left: 27,
+                  top: 240,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                    height: 200,
+                    width: 190,
+                    child: Image.asset('assets/images/Sleep.png'),
+                  ),
+                ),
+
+                Positioned(
+                  right: 27,
+                  top: 240,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                    height: 200,
+                    width: 190,
+                    child: Image.asset('assets/images/Exercise.png'),
+                  ),
+                ),
+              ],
             ),
+          ),
+
+
           ],
         );
+
+        
+        
       }
     }

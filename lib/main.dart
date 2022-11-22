@@ -1,26 +1,25 @@
 import 'package:fitmetry/constants.dart';
-import 'package:fitmetry/screen/home/home_screen.dart';
+import 'package:fitmetry/screen/home/components/nav.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main(){
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
+  //const MyApp main({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Bottom Navigation Bar',
       theme: ThemeData(
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: Nav(),
     );
   }
 }
-
