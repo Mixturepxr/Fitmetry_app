@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+class Cal extends StatelessWidget {
+  const Cal({super.key});
 
-class calScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -14,10 +16,10 @@ class calScreen extends StatelessWidget {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text('Calories',style: TextStyle(fontFamily: 'Lato',fontSize: 20,fontWeight: FontWeight.bold),),
+        title: const Text('Calories',style: TextStyle(fontFamily: 'Lato',fontSize: 20,fontWeight: FontWeight.bold),),
         
         elevation: 0,
-        backgroundColor: Colors.transparent,
+         backgroundColor: Colors.transparent,
         
         flexibleSpace: Container(
           decoration: const BoxDecoration(

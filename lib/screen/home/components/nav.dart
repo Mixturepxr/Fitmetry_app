@@ -12,6 +12,7 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
+    // CalorieScreen(),
     const Text('Home'),
     const Text('Feeds'),
     const Text('Events'),
@@ -34,13 +35,13 @@ class _NavState extends State<Nav> {
           child: _widgetOptions.elementAt(_selectedIndex)),
         bottomNavigationBar: SizedBox(height: 110,
         child: BottomNavigationBar(
+          
           type: BottomNavigationBarType.fixed,
           selectedItemColor: '21BF73'.toColor(),
           unselectedItemColor: 'B9BFB8'.toColor(),
           selectedFontSize: 12,
           unselectedFontSize: 12,
-          
-          
+            
           items: [
             BottomNavigationBarItem(
               icon: Padding(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'calories.dart';
+import '../calories.dart';
 
 
 class Body extends StatelessWidget {
@@ -106,7 +105,7 @@ class Body extends StatelessWidget {
                 onPressed: () {
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) {
-                  return calScreen();
+                  return const Cal();
                   }
                 ),
               );
