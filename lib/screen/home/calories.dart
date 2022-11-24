@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'SearchPage.dart';
+import 'components/nav.dart';
+
 class Cal extends StatelessWidget {
   const Cal({super.key});
 
@@ -28,7 +31,14 @@ class Cal extends StatelessWidget {
               color: Color(0xff21BF73)),
         ),
         leading: IconButton(
-          onPressed: () => {},
+          onPressed: () => {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) {
+                  return const Nav();
+                  }
+                ),
+              ),
+          },
           icon: const Icon(Icons.arrow_back, size: 25))
       ),
       body: Center(
@@ -149,7 +159,14 @@ class Cal extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.fromLTRB(90, 10, 0, 0),
                                 child: FloatingActionButton.small(
-                                  onPressed: (() => {}),
+                                  onPressed: (() => {
+                                    Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                      return const SearchPage();
+                                      }
+                                    ),
+                                  )
+                                  }),
                                   heroTag: 'Add1',
                                   tooltip: 'Add',
                                   backgroundColor: const Color(0xff21BF73),
@@ -317,7 +334,8 @@ class Cal extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 40, 20, 40),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                      },
                       child: Container(
                           width: 168,
                           padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
