@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fitmetry/hex_color.dart';
-import 'package:fitmetry/screen/home/home_screen.dart';
 
 import 'calories2.dart';
 

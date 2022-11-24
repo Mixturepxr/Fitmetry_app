@@ -1,9 +1,7 @@
-import 'package:fitmetry/screen/home/calories.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/services.dart';
-
-import 'components/calories2.dart';
+import 'components/navCal.dart';
 import 'components/navCal2.dart';
 import 'food_model.dart';
 
@@ -73,11 +71,19 @@ class _SearchPageState extends State<SearchPage> {
           children: [
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const <Widget>[
-                  Icon(
-                    Icons.close,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.close,),
+                    iconSize: 30,
                     color: Colors.black,
-                    size: 30.0,
+                    onPressed: () {
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                          return NavCal();
+                        }
+                        ),
+                      );
+                    },
                   ),
                   Center(
                     child: Text(

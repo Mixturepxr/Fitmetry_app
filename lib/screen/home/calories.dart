@@ -1,5 +1,4 @@
 import 'package:fitmetry/screen/home/components/nav.dart';
-import 'package:fitmetry/screen/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'SearchPage.dart';

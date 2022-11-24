@@ -1,7 +1,5 @@
 import 'package:fitmetry/screen/home/components/navCal.dart';
 import 'package:flutter/material.dart';
-import '../calories.dart';
-
 
 class Body extends StatelessWidget {
   const Body({super.key});
