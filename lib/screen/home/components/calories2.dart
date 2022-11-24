@@ -2,10 +2,10 @@ import 'package:fitmetry/screen/home/components/nav.dart';
 import 'package:fitmetry/screen/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'SearchPage.dart';
+import '../SearchPage.dart';
 
-class Cal extends StatelessWidget {
-  const Cal({super.key});
+class Cal2 extends StatelessWidget {
+  const Cal2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class Cal extends StatelessWidget {
           onPressed: () => {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) {
-                  return Nav();
+                  return SearchPage();
                   }
                 ),
               ),
@@ -64,7 +64,7 @@ class Cal extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: Image.asset('assets/images/Calories.png'),
+                child: Image.asset('assets/images/Calories2.png'),
               ),
               Container(
                 child: Column(
@@ -92,14 +92,7 @@ class Cal extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 40, 10, 40),
                     child: InkWell(
-                      onTap: () { 
-                          Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                            return const SearchPage();
-                           },
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                           width: 168,
                           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -140,48 +133,90 @@ class Cal extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
-                              Container(
-                                padding:
-                                    const EdgeInsets.fromLTRB(0, 10, 5, 0),
-                                child: const Text(
-                                  "Recommeneded portion",
-                                  style: TextStyle(
-                                      fontFamily: 'lato',
-                                      color: Color(0xff696666),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w300),
-                                ),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.fromLTRB(0, 5, 65, 0),
-                                child: const Text(
-                                  "300 - 350 kcal",
-                                  style: TextStyle(
-                                      fontFamily: 'lato',
-                                      color: Color(0xff696666),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w300),
-                                ),
-                              ),
-                              Container(
-                                padding:
-                                    const EdgeInsets.fromLTRB(90, 10, 0, 0),
-                                child: FloatingActionButton.small(
-                                  onPressed: (() => {
-                                  Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                  return const SearchPage();
-                                },
-                                ),
-                                ),
-                                }
-                                ),
-                                  heroTag: 'Add1',
-                                  tooltip: 'Add',
-                                  backgroundColor: const Color(0xff21BF73),
-                                  child: const Icon(Icons.add),
-                                ),
-                              )
+                              Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.fromLTRB(
+                                                20, 5, 0, 0),
+                                            child: const Text(
+                                              "・",
+                                              style: TextStyle(
+                                                  fontFamily: 'lato',
+                                                  color: Color(0xff21BF73),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w300),
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.fromLTRB(
+                                                5, 5, 0, 0),
+                                            child: const Text(
+                                              "Scrambled Egg",
+                                              style: TextStyle(
+                                                  fontFamily: 'lato',
+                                                  color: Color(0xff696666),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w300),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.fromLTRB(
+                                                20, 5, 0, 0),
+                                            child: const Text(
+                                              "・",
+                                              style: TextStyle(
+                                                  fontFamily: 'lato',
+                                                  color: Color(0xff21BF73),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w300),
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.fromLTRB(
+                                                5, 5, 0, 0),
+                                            child: const Text(
+                                              "Sourdough",
+                                              style: TextStyle(
+                                                  fontFamily: 'lato',
+                                                  color: Color(0xff696666),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w300),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.fromLTRB(
+                                                20, 10, 0, 0),
+                                            child: const Text(
+                                              "246.97 kcal",
+                                              style: TextStyle(
+                                                  fontFamily: 'lato',
+                                                  color: Color(0xff21BF73),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: const EdgeInsets.fromLTRB(
+                                                10, 10, 0, 0),
+                                            child: FloatingActionButton.small(
+                                              onPressed: (() => {}),
+                                              heroTag: 'Add1',
+                                              tooltip: 'Add',
+                                              backgroundColor:
+                                                  const Color(0xff21BF73),
+                                              child: const Icon(Icons.add),
+                                            ),
+                                          )
+                                        ],
+                                      )
                             ],
                           )),
                     ),

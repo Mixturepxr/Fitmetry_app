@@ -1,7 +1,10 @@
+import 'package:fitmetry/screen/home/calories.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/services.dart';
 
+import 'components/calories2.dart';
+import 'components/navCal2.dart';
 import 'food_model.dart';
 
 class SearchPage extends StatefulWidget {
@@ -101,16 +104,17 @@ class _SearchPageState extends State<SearchPage> {
                 filled: true,
                 fillColor: Colors.white,
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25.0),
+                  borderRadius: BorderRadius.circular(15.0),
                   borderSide: BorderSide(width: 16.0, color: Color(0xFF21BF73)),
                 ),
-                hintText: "Foods,Recipe",
+                hintText: "Foods, Recipe",
                 prefixIcon: Icon(Icons.search, color: Color(0xFF21BF73)),
-                suffixIcon: Icon(Icons.qr_code, color: Color(0xFF21BF73)),
+                suffixIcon: Image.asset('assets/icons/qr.png'),
               ),
             ),
             SizedBox(
               height: 20.0,
+              
             ),
             Expanded(
               child: ListView.builder(
@@ -142,7 +146,7 @@ class _SearchPageState extends State<SearchPage> {
             ),
             Center(
               child: Container(
-                padding: EdgeInsets.all(15.5),
+                padding: EdgeInsets.all(15),
                 width: 366,
                 decoration: BoxDecoration(
                     color: Color(0xFF21BF73),
@@ -151,7 +155,14 @@ class _SearchPageState extends State<SearchPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                            return NavCal2();
+                          },
+                          ),
+                          );
+                        },
                         child: const Text("Add to breakfast",
                             style: TextStyle(
                                 color: Colors.white,

@@ -1,3 +1,4 @@
+import 'package:fitmetry/screen/home/components/navCal.dart';
 import 'package:flutter/material.dart';
 import '../calories.dart';
 
@@ -105,7 +106,7 @@ class Body extends StatelessWidget {
                       onTap: () {
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) {
-                  return const Cal();
+                  return const NavCal();
                   }
                 ),
               );
