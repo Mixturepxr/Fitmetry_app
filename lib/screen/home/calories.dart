@@ -150,6 +150,7 @@ class Cal extends StatelessWidget {
                                     const EdgeInsets.fromLTRB(90, 10, 0, 0),
                                 child: FloatingActionButton.small(
                                   onPressed: (() => {}),
+                                  heroTag: 'Add1',
                                   tooltip: 'Add',
                                   backgroundColor: const Color(0xff21BF73),
                                   child: const Icon(Icons.add),
@@ -231,6 +232,7 @@ class Cal extends StatelessWidget {
                                     const EdgeInsets.fromLTRB(90, 10, 0, 0),
                                 child: FloatingActionButton.small(
                                   onPressed: (() => {}),
+                                  heroTag: 'Add2',
                                   tooltip: 'Add',
                                   backgroundColor: const Color(0xff21BF73),
                                   child: const Icon(Icons.add),
@@ -300,6 +302,7 @@ class Cal extends StatelessWidget {
                               Container(
                                 padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
                                 child: FloatingActionButton.small(
+                                  heroTag: 'Add3',
                                   onPressed: (() => {}),
                                   tooltip: 'Add',
                                   backgroundColor: const Color(0xff21BF73),
@@ -370,6 +373,7 @@ class Cal extends StatelessWidget {
                                 padding: const EdgeInsets.fromLTRB(90, 0, 0, 0),
                                 child: FloatingActionButton.small(
                                   onPressed: (() => {}),
+                                  heroTag: 'Add4',
                                   tooltip: 'Add',
                                   backgroundColor: const Color(0xff21BF73),
                                   child: const Icon(Icons.add),
