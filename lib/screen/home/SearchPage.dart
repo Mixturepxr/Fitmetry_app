@@ -1,8 +1,12 @@
+import 'package:fitmetry/screen/home/calories.dart';
 import 'package:flutter/material.dart';
 import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/services.dart';
-import 'components/navCal.dart';
+
+import 'components/calories2.dart';
 import 'components/navCal2.dart';
+import 'components/navCal.dart';
+
 import 'food_model.dart';
 
 class SearchPage extends StatefulWidget {
@@ -91,7 +95,8 @@ class _SearchPageState extends State<SearchPage> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 20.0,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'lato'),
                     ),
                   ),
                   Icon(
@@ -142,6 +147,7 @@ class _SearchPageState extends State<SearchPage> {
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'lato',
                     ),
                   ),
                   subtitle: Text(
@@ -152,8 +158,9 @@ class _SearchPageState extends State<SearchPage> {
             ),
             Center(
               child: Container(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(0),
                 width: 366,
+                height: 48,
                 decoration: BoxDecoration(
                     color: Color(0xFF21BF73),
                     borderRadius: BorderRadius.circular(15)),
@@ -173,6 +180,7 @@ class _SearchPageState extends State<SearchPage> {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'lato',
                                 fontSize: 17
                                 )
                                 )
@@ -186,4 +194,8 @@ class _SearchPageState extends State<SearchPage> {
       ),
     );
   }
+}
+
+void _onSearchButtonPressed() {
+print("search button clicked");
 }
